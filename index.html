@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VATRIX Clothing</title>
+  <style>
+    :root {
+      --brand: #6cf0d6;
+      --accent: #a882ff;
+      --text: #e7ecf3;
+      --bg: #0f1115;
+      --nav-bg: rgba(20, 22, 28, 0.85);
+      --card: rgba(31,32,38, 0.90);
+      --radius: 20px;
+      --shadow: 0 10px 32px rgba(0,0,0,0.25);
+      --font: 'Montserrat', system-ui, sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--nav-bg);
+      padding: 0.7rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--brand);
+    }
+    .navbar ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar li a:hover {
+      color: var(--brand);
+    }
+    .hero {
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('assets/wolf-bg.jpg') center/cover no-repeat;
+      margin-top: 56px;
+    }
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(18,24,34, 0.55);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(31,32,38,0.73);
+      padding: 2rem 3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-content h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5rem;
+      color: var(--brand);
+    }
+    .hero-content p {
+      margin: 0;
+      font-size: 1.3rem;
+      color: var(--text);
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin: 2.5rem 0;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--brand);
+    }
+    .product-list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .product-card {
+      background: rgba(20,22,28,0.92);
+      border-radius: 12px;
+      box-shadow: 0 2px 18px #192c48ac;
+      padding: 1.2rem;
+      width: 280px;
+      text-align: center;
+      color: var(--text);
+      transition: transform 0.15s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 4px 32px var(--accent);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0009;
+    }
+    footer {
+      text-align: center;
+      color: #98a3b3;
+      padding: 2rem 0 1rem 0;
+      font-size: 1rem;
+    }
+    #contact a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">VATRIX</div>
+    <ul>
+      <li><a href="#opening">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header id="opening" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to VATRIX</h1>
+      <p>Streetwear inspired by the spirit of the wolf.</p>
+    </div>
+  </header>
+  <main>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="assets/product1.jpg" alt="Welfare T-shirt back design"/>
+          <h3>Welfare T-shirt</h3>
+          <p>Bold graphic streetwear tee.</p>
+        </div>
+        <div class="product-card">
+          <img src="assets/product2.jpg" alt="Heaven Sent T-shirt front design"/>
+          <h3>Heaven Sent T-shirt</h3>
+          <p>Minimalist Vatrix tee with wolf logo.</p>
+        </div>
+        <div class="product-card">
+          <img src="assets/product-full.jpg" alt="Vatrix T-shirt full design"/>
+          <h3>Full Product Sheet</h3>
+          <p>See all design details in one view.</p>
+        </div>
+        <!-- New images as requested -->
+        <div class="product-card">
+          <img src="assets/gallery1.jpg" alt="Welfare T-shirt Back Design"/>
+          <h3>Welfare T-shirt Back</h3>
+          <p>Detailed view of the back design of the Welfare T-shirt.</p>
+        </div>
+        <div class="product-card">
+          <img src="assets/gallery2.jpg" alt="Heaven Sent T-shirt Front Design"/>
+          <h3>Heaven Sent T-shirt Front</h3>
+          <p>Detailed view of the front design of the Heaven Sent T-shirt.</p>
+        </div>
+        <div class="product-card">
+          <img src="assets/gallery3.jpg" alt="Vatrix T-shirt Front & Back"/>
+          <h3>Full Vatrix Shirt</h3>
+          <p>Front and back view of the Vatrix shirt with all design details.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Phone: <a href="tel:+19842944347">+1 984 294 4347</a></p>
+      <p>Follow us on Instagram: <a href="#">@vatrix</a></p>
+    </section>
+  </main>
+  <footer>
+    © <span id="year"></span> VATRIX — All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>     
